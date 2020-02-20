@@ -5,16 +5,24 @@ using namespace std;
 
 int main()
 {
-	Mat m = Mat::zeros(600, 600, CV_32F);
+	Mat m = imread("1.png",0);
+	Mat table(1,256,CV_8UC1);
+	uchar* p = table.data;
+		for (int i = 0; i < 256; i++)
+	{
+			p[i] = i / 10 * 10;
+			
+	}
 
-	ellipse(m, Point(300, 300),Size(100, 50), 0, 0, 360,Scalar(255,0,0), 1, 8);
-	ellipse(m, Point(300, 300), Size(100, 50), 90, 0, 360, Scalar(255, 0, 0), 1, 8);
-	ellipse(m, Point(300, 300), Size(100, 50), 45, 0, 360, Scalar(255, 0, 0), 1, 8);
-	ellipse(m, Point(300, 300), Size(100, 50), -45, 0, 360, Scalar(255, 0, 0), 1, 8);
-	circle(m, Point(300, 300), 20, Scalar(255, 0, 0),-1);
+		Mat m2;
+		imshow("a", m);
+		LUT(m, table, m2);
+		imshow("b", m2);
 	
-	imshow("a", m);
-	waitKey(0);
+		waitKey(0);
+	
+	
+	
 	return 0;
 }
 

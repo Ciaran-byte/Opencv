@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<Num>100</Num>
+<R type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>u</dt>
+  <data>
+    1 0 0 0 1 0 0 0 1</data></R>
+<strings>
+  image1.jpg A B</strings>
+<mapping>
+  <one>1</one>
+  <two>2</two></mapping>
+</opencv_storage>
